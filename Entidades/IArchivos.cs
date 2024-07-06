@@ -8,7 +8,9 @@ namespace Entidades
 {
     public interface IArchivos
     {
-        bool Guardar();
-        List<Barco> Leer();
+        //Serializar
+        bool Guardar(string path, Taller taller);
+        //Deserializar
+        List<Barco> Leer(string path);
     }
 }

@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace Entidades
 {
     [Serializable]
+    [XmlInclude(typeof(Pirata))]
+    [XmlInclude(typeof(Marina))]
     public abstract class Barco
     {
         //Atributos

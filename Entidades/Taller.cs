@@ -15,6 +15,7 @@ namespace Entidades
         public List<Barco> Barcos 
         {
             get => this.barcos;
+            set => this.barcos = value;
         }
 
         //Constructores
@@ -28,15 +29,14 @@ namespace Entidades
         {
             bool resultado;
             resultado = false;
-            foreach (Barco barcoLista in this.barcos)
+            foreach (Barco brco in this.barcos)
             {
-                if (barcoLista.CompararBarcos(barco))
+                if (brco.CompararBarcos(barco))
                 {
                     resultado = true;
                     break;
                 }
             }
-
             return resultado;
         }
 
@@ -54,14 +54,14 @@ namespace Entidades
             resultado = false;
             if(taller is Taller)
             {
-                foreach (Barco barcoLista in ((Taller)taller).barcos)
+                foreach (Barco brco in ((Taller)taller).barcos)
                 {
-                    if (barcoLista.EstadoReparado == false)
+                    if (brco.EstadoReparado == false)
                     {
-                        barcoLista.CalcularCosto();
+                        brco.CalcularCosto();
                         //guardar el costo en la base de datos. Ver qué le voy a pasar y usar try catch.
                         AccesoDatos.Guardar();
-                        barcoLista.EstadoReparado = true;
+                        brco.EstadoReparado = true;
                         resultado = true;
                     }
                 }
