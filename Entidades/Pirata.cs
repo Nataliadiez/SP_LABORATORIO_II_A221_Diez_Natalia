@@ -13,7 +13,15 @@ namespace Entidades
         {
             get
             {
-                return 5;
+                if(Tripulacion == 0)
+                {
+                    Tripulacion = GenerarRandom.EnteroAleatrio(10, 30);
+                }
+                return Tripulacion;
+            }
+            set
+            {
+                return;
             }
         }
 
@@ -31,7 +39,9 @@ namespace Entidades
         //Métodos
         public override void CalcularCosto()
         {
-            throw new NotImplementedException();
+            double numeroRandom;
+            numeroRandom = GenerarRandom.DoubleAleatrio(2000, 12000);
+            this.costo = (float)numeroRandom;
         }
         public override string ToString()
         {

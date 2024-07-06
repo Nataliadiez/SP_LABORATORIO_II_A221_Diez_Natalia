@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
+    [Serializable]
     public abstract class Barco
     {
         //Atributos
@@ -18,18 +19,22 @@ namespace Entidades
         //Propiedades
         public float Costo {
             get => costo;
+            set => costo = value;
         }
         public bool EstadoReparado {
             get => estadoReparado;
+            set => estadoReparado = value;
         }
         public string Nombre {
-            get => nombre;
+            get => nombre; 
+            set => nombre = value;
         }
         public EOperacion Operacion {
-            get => operacion;
+            get => operacion; 
+            set => operacion = value;
         }
 
-        public abstract int Tripulacion { get; }
+        public abstract int Tripulacion { get; set; }
 
         //Constructores
         public Barco()
@@ -47,9 +52,15 @@ namespace Entidades
         }
 
         //Métodos
-        public bool CompararBarcos()
+        public bool CompararBarcos(Barco barco)
         {
-            return true;
+            bool resultado;
+            resultado = false;
+            if (this.Nombre == barco.Nombre)
+            {
+                resultado = true;
+            }
+            return resultado;
         }
 
         public abstract void CalcularCosto();
@@ -58,10 +69,10 @@ namespace Entidades
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Costo: {this.costo}");
             sb.AppendLine($"Estado de repacación: {this.estadoReparado}");
             sb.AppendLine($"Nombre: {this.nombre}");
             sb.AppendLine($"Operación: {this.operacion}");
+            sb.AppendLine($"Costo: {this.costo}");
             return sb.ToString();
         }
 

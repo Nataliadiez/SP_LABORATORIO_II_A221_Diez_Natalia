@@ -65,7 +65,7 @@
     </TypeIdentifier>
   </Enum>
   <Enum Name="Entidades.ETipoBarco">
-    <Position X="9.75" Y="5.5" Width="2" />
+    <Position X="9.25" Y="5.5" Width="2" />
     <TypeIdentifier>
       <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
       <FileName>EOperacion.cs</FileName>

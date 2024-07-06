@@ -14,7 +14,15 @@ namespace Entidades
         {
             get
             {
-                return 5;
+                if (Tripulacion == 0)
+                {
+                    Tripulacion = GenerarRandom.EnteroAleatrio(30, 60);
+                }
+                return Tripulacion;
+            }
+            set
+            {
+                return;
             }
         }
         //Constructores
@@ -25,13 +33,16 @@ namespace Entidades
         //Métodos
         public override void CalcularCosto()
         {
-            throw new NotImplementedException();
+            double numeroRandom;
+            numeroRandom = GenerarRandom.DoubleAleatrio(5000, 25000);
+            this.costo = (float)numeroRandom;
         }
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine(base.ToString());
             sb.AppendLine($"Tripulación: {Tripulacion}");
+            
             return sb.ToString();
         }
     }
