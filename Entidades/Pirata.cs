@@ -13,16 +13,13 @@ namespace Entidades
         {
             get
             {
-                if(Tripulacion == 0)
+                if (this.tripulacion == 0)
                 {
-                    Tripulacion = GenerarRandom.EnteroAleatrio(10, 30);
+                    this.tripulacion = GenerarRandom.EnteroAleatrio(10, 30);
                 }
-                return Tripulacion;
+                return this.tripulacion;
             }
-            set
-            {
-                return;
-            }
+            set => this.tripulacion = value;
         }
 
         //Constructores

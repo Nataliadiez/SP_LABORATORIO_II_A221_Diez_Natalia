@@ -8,28 +8,26 @@ namespace Entidades
 {
     public class Marina:Barco
     {
-        //Atributos
         //Propiedades
         public override int Tripulacion
         {
             get
             {
-                if (Tripulacion == 0)
+                if (this.tripulacion == 0)
                 {
-                    Tripulacion = GenerarRandom.EnteroAleatrio(30, 60);
+                    this.tripulacion = GenerarRandom.EnteroAleatrio(30, 60);
                 }
-                return Tripulacion;
+                return this.tripulacion;
             }
-            set
-            {
-                return;
-            }
+            set => this.tripulacion = value;
         }
+
         //Constructores
         public Marina(float costo, bool estado, string nombre, EOperacion operacion, int tripulacion) : base(costo, estado, nombre, operacion, tripulacion)
         {
 
         }
+
         //Métodos
         public override void CalcularCosto()
         {

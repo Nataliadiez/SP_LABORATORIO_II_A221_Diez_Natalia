@@ -20,27 +20,52 @@ namespace Entidades
         //Constructores
         public Taller()
         {
-
+            this.barcos = new List<Barco>();
         }
 
         //Métodos
-        public bool EncontrarBarco()
+        public bool EncontrarBarco(Barco barco)
         {
             bool resultado;
             resultado = false;
+            foreach (Barco barcoLista in this.barcos)
+            {
+                if (barcoLista.CompararBarcos(barco))
+                {
+                    resultado = true;
+                    break;
+                }
+            }
+
             return resultado;
         }
 
-        public Taller IngresarBarco()
+        public Taller IngresarBarco(Barco barco)
         {
-            Taller taller = new Taller();
-            return taller;
+            if (this.EncontrarBarco(barco))
+            {
+                this.barcos.Add(barco);
+            }
+            return this;
         }
-
-        public bool Reparar()
+        public bool Reparar(Taller taller)
         {
             bool resultado;
             resultado = false;
+            if(taller is Taller)
+            {
+                foreach (Barco barcoLista in ((Taller)taller).barcos)
+                {
+                    if (barcoLista.EstadoReparado == false)
+                    {
+                        barcoLista.CalcularCosto();
+                        //guardar el costo en la base de datos. Ver qué le voy a pasar y usar try catch.
+                        AccesoDatos.Guardar();
+                        barcoLista.EstadoReparado = true;
+                        resultado = true;
+                    }
+                }
+            }
             return resultado;
         }
 
