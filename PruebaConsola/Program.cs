@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,10 +11,11 @@ namespace PruebaConsola
     {
         static void Main(string[] args)
         {
-            double resultado;
-            Random rnd = new Random();
-            resultado = rnd.NextDouble() * (12000 - 2000) + 2000;
-            Console.WriteLine(Math.Round(resultado, 2));
+            Pirata barco1 = new Pirata(150, false, "El Holándes", EOperacion.Pintar, 5);
+            
+
+            //Console.WriteLine(barco1.ToString());
+            Console.WriteLine(AccesoDatos.Guardar("Hola me llamo Natt"));
             Console.ReadKey();
         }
     }

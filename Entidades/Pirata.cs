@@ -44,7 +44,7 @@ namespace Entidades
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine(base.ToString());
+            sb.Append(base.ToString());
             sb.AppendLine($"Tripulación: {Tripulacion}");
             return sb.ToString();
         }

@@ -59,8 +59,8 @@ namespace Entidades
                     if (brco.EstadoReparado == false)
                     {
                         brco.CalcularCosto();
-                        //guardar el costo en la base de datos. Ver qué le voy a pasar y usar try catch.
-                        AccesoDatos.Guardar();
+                        string mensaje = $"Se reparó el {brco.Nombre} a un costo de {brco.Costo} berries";
+                        AccesoDatos.Guardar(mensaje);
                         brco.EstadoReparado = true;
                         resultado = true;
                     }
