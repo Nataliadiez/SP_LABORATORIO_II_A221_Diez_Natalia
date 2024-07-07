@@ -8,37 +8,25 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidades;
 
 namespace TallerFrankyUi
 {
     public partial class FrmReparacion : Form
     {
-        
-        public FrmReparacion()
+        Taller tallerEnReparacion;
+        public FrmReparacion(Taller taller)
         {
             InitializeComponent();
+            this.tallerEnReparacion = taller;
+            //tallerEnReparacion.Reparar(taller);
+            //ver si puede reparar todos los barcos
         }
 
-        /*
-         * iii. FrmReparacion:
-            1. Su constructor recibe un Taller como parámetro.
-            2. El evento LOAD deberá mostrar en el listbox todos los barcos del taller
-         */
         private void FrmReparacion_Load(object sender, EventArgs e)
         {
-            //TODO: Asocio el evento que va a imprimir el ticket
-            //TODO: Instanciar y comenzar el hilo que se va a encargar de reparar los barcos del taller
-           
+            lstTaller.DataSource = tallerEnReparacion.Barcos;
         }
 
-        private void FrmReparacion_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            
-        }
-
-        private void lblBarcoTipo_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

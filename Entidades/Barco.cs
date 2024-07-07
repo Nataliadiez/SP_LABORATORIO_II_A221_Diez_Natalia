@@ -68,14 +68,13 @@ namespace Entidades
 
         public abstract void CalcularCosto();
 
-
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Estado de repacación: {this.estadoReparado}");
-            sb.AppendLine($"Nombre: {this.nombre}");
-            sb.AppendLine($"Operación: {this.operacion}");
-            sb.AppendLine($"Costo: {this.costo}");
+            sb.AppendLine($"Estado de reparación: {this.estadoReparado}");
+            sb.AppendLine($" Nombre: {this.nombre}");
+            sb.AppendLine($" Operación: {this.operacion}");
+            sb.AppendLine($" Costo: {this.costo}");
             return sb.ToString();
         }
 

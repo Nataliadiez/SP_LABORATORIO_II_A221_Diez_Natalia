@@ -45,7 +45,7 @@ namespace Entidades
         {
             StringBuilder sb = new StringBuilder();
             sb.Append(base.ToString());
-            sb.AppendLine($"Tripulación: {Tripulacion}");
+            sb.AppendLine($" Tripulación: {Tripulacion}");
             
             return sb.ToString();
         }

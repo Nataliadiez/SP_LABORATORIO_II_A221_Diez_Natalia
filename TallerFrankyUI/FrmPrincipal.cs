@@ -16,13 +16,14 @@ namespace TallerFrankyUi
     {
         Taller taller1;
         XmlManager xmlManager;
+        string path;
         public FrmPrincipal()
         {
             InitializeComponent();
             this.taller1 = new Taller();
             this.xmlManager = new XmlManager();
+            this.path = "C:\\Users\\PC\\Downloads\\SPL2_1C2024-main\\Archivos Xml\\barcos.xml";
         }
-
 
         private void btnCargarBarco_Click(object sender, EventArgs e)
         {
@@ -37,7 +38,8 @@ namespace TallerFrankyUi
 
         private void btnReparar_Click(object sender, EventArgs e)
         {
-            
+            FrmReparacion formReparacion = new FrmReparacion(taller1);
+            formReparacion.ShowDialog();
         }
 
         private void FrmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
@@ -54,16 +56,18 @@ namespace TallerFrankyUi
         {
             //TODO: Utilizar la clase XmlManager para guardar el archivo xml
             //cambiar ruta al final
-            if (this.xmlManager.Guardar("C:\\Users\\SPL2_1C2024-main\\taller.xml", this.taller1))
+            if (this.xmlManager.Guardar(path, this.taller1) == true)
             {
                 MessageBox.Show("Archivo xml generado!");
+            }
+            else
+            {
+                Console.WriteLine("No se pudo crear el archivo.");
             }
         }
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-            string path = "C:\\Users\\PC\\Documents\\barcos.xml";
-
             if (File.Exists(path))
             {
                 this.taller1.Barcos = this.xmlManager.Leer(path);
@@ -72,7 +76,6 @@ namespace TallerFrankyUi
             {
                 Console.WriteLine("El archivo no existe.");
             }
-            
         }
     }
 }

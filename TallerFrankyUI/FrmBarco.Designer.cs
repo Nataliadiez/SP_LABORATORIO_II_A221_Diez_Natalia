@@ -43,7 +43,7 @@
             this.cmbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipo.Font = new System.Drawing.Font("Calibri", 10F);
             this.cmbTipo.FormattingEnabled = true;
-            this.cmbTipo.Location = new System.Drawing.Point(29, 148);
+            this.cmbTipo.Location = new System.Drawing.Point(138, 64);
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.Size = new System.Drawing.Size(147, 23);
             this.cmbTipo.TabIndex = 0;
@@ -51,7 +51,7 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Calibri", 10F);
-            this.txtNombre.Location = new System.Drawing.Point(29, 61);
+            this.txtNombre.Location = new System.Drawing.Point(138, 21);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(147, 24);
             this.txtNombre.TabIndex = 2;
@@ -62,7 +62,7 @@
             this.lblMarca.BackColor = System.Drawing.Color.Transparent;
             this.lblMarca.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMarca.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblMarca.Location = new System.Drawing.Point(26, 32);
+            this.lblMarca.Location = new System.Drawing.Point(25, 21);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(78, 24);
             this.lblMarca.TabIndex = 3;
@@ -74,7 +74,7 @@
             this.lblTipo.BackColor = System.Drawing.Color.Transparent;
             this.lblTipo.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipo.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTipo.Location = new System.Drawing.Point(26, 115);
+            this.lblTipo.Location = new System.Drawing.Point(26, 63);
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(47, 24);
             this.lblTipo.TabIndex = 4;
@@ -85,7 +85,7 @@
             this.cmbOperacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbOperacion.Font = new System.Drawing.Font("Calibri", 10F);
             this.cmbOperacion.FormattingEnabled = true;
-            this.cmbOperacion.Location = new System.Drawing.Point(29, 229);
+            this.cmbOperacion.Location = new System.Drawing.Point(138, 110);
             this.cmbOperacion.Name = "cmbOperacion";
             this.cmbOperacion.Size = new System.Drawing.Size(147, 23);
             this.cmbOperacion.TabIndex = 5;
@@ -96,7 +96,7 @@
             this.lblOperacion.BackColor = System.Drawing.Color.Transparent;
             this.lblOperacion.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold);
             this.lblOperacion.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblOperacion.Location = new System.Drawing.Point(26, 199);
+            this.lblOperacion.Location = new System.Drawing.Point(26, 109);
             this.lblOperacion.Name = "lblOperacion";
             this.lblOperacion.Size = new System.Drawing.Size(97, 24);
             this.lblOperacion.TabIndex = 7;
@@ -105,7 +105,7 @@
             // btnCargar
             // 
             this.btnCargar.Font = new System.Drawing.Font("Calibri", 12F);
-            this.btnCargar.Location = new System.Drawing.Point(29, 277);
+            this.btnCargar.Location = new System.Drawing.Point(121, 297);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(147, 27);
             this.btnCargar.TabIndex = 8;
@@ -118,7 +118,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(215, 316);
+            this.ClientSize = new System.Drawing.Size(392, 359);
             this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.lblOperacion);
             this.Controls.Add(this.cmbOperacion);

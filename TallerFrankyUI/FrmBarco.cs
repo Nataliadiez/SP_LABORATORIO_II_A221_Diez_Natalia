@@ -15,13 +15,11 @@ namespace TallerFrankyUi
     {
         Barco barcoNuevo;
 
-
         public Barco BarcoNuevo
         {
             get => this.barcoNuevo;
             set => this.barcoNuevo = value;
         }
-
 
         public FrmBarco()
         {
@@ -32,7 +30,6 @@ namespace TallerFrankyUi
             {
                 cmbOperacion.Items.Add(operacionEnum);
             }
-            
         }
 
         private void FrmVehiculo_Load(object sender, EventArgs e)

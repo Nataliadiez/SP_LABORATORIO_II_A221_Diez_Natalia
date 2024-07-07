@@ -18,6 +18,7 @@ namespace Entidades
                 {
                     this.tripulacion = GenerarRandom.EnteroAleatrio(10, 30);
                 }
+
                 return this.tripulacion;
             }
             set => this.tripulacion = value;
@@ -45,7 +46,7 @@ namespace Entidades
         {
             StringBuilder sb = new StringBuilder();
             sb.Append(base.ToString());
-            sb.AppendLine($"Tripulación: {Tripulacion}");
+            sb.AppendLine($" Tripulación: {Tripulacion}");
             return sb.ToString();
         }
     }

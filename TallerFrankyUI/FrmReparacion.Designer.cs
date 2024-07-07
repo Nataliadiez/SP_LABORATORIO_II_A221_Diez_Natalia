@@ -55,7 +55,6 @@
             this.Name = "FrmReparacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmReparacion";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmReparacion_FormClosing);
             this.Load += new System.EventHandler(this.FrmReparacion_Load);
             this.ResumeLayout(false);
 

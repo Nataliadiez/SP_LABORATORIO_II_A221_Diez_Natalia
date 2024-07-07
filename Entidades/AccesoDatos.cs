@@ -18,7 +18,6 @@ namespace Entidades
         static AccesoDatos()
         {
             connectionString = $"Server=localhost; Database=escuela; User ID=root; Password=; SslMode=none;";
-            connection = new MySqlConnection(connectionString);
         }
 
         public static bool Guardar(string mensajeReparacion)
@@ -26,6 +25,7 @@ namespace Entidades
             bool resultado;
             resultado = false;
 
+            connection = new MySqlConnection(connectionString);
             using (connection)
             {
                 connection.Open();
@@ -40,6 +40,27 @@ namespace Entidades
 
             return resultado;
         }
+
+        //public static bool GuardarBarcos(Barco barco)
+        //{
+        //    bool resultado;
+        //    resultado = false;
+
+        //    connection = new MySqlConnection(connectionString);
+        //    using (connection)
+        //    {
+        //        connection.Open();
+        //        string query = "INSERT INTO alumnos(mensaje, alumno)" +
+        //            $"VALUES(@mensaje,@alumno)";
+        //        command = new MySqlCommand(query, connection);
+        //        command.Parameters.AddWithValue("@mensaje", mensajeReparacion);
+        //        command.Parameters.AddWithValue("@alumno", "Natalia");
+        //        command.ExecuteNonQuery();
+        //        resultado = true;
+        //    }
+
+        //    return resultado;
+        //}
 
     }
 }

@@ -12,7 +12,7 @@ namespace Entidades
         List<Barco> barcos;
 
         //Propiedades
-        public List<Barco> Barcos 
+        public List<Barco> Barcos
         {
             get => this.barcos;
             set => this.barcos = value;
@@ -52,22 +52,19 @@ namespace Entidades
         {
             bool resultado;
             resultado = false;
-            if(taller is Taller)
+            foreach (Barco brco in taller.Barcos)
             {
-                foreach (Barco brco in ((Taller)taller).Barcos)
+                if (brco.EstadoReparado == false)
                 {
-                    if (brco.EstadoReparado == false)
-                    {
-                        brco.CalcularCosto();
-                        string mensaje = $"Se reparó el {brco.Nombre} a un costo de {brco.Costo} berries";
-                        AccesoDatos.Guardar(mensaje);
-                        brco.EstadoReparado = true;
-                        resultado = true;
-                    }
+                    brco.CalcularCosto();
+                    string mensaje = $"Se reparó el {brco.Nombre} a un costo de {brco.Costo} berries";
+                    AccesoDatos.Guardar(mensaje);
+                    brco.EstadoReparado = true;
+                    resultado = true;
                 }
             }
+
             return resultado;
         }
-
     }
 }
