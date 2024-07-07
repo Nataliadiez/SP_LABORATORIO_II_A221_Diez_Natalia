@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmReparacion));
             this.lstTaller = new System.Windows.Forms.ListBox();
+            this.btnReparar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lstTaller
@@ -40,6 +41,16 @@
             this.lstTaller.Size = new System.Drawing.Size(595, 238);
             this.lstTaller.TabIndex = 0;
             // 
+            // btnReparar
+            // 
+            this.btnReparar.Location = new System.Drawing.Point(431, 418);
+            this.btnReparar.Name = "btnReparar";
+            this.btnReparar.Size = new System.Drawing.Size(123, 35);
+            this.btnReparar.TabIndex = 1;
+            this.btnReparar.Text = "Reparar barcos";
+            this.btnReparar.UseVisualStyleBackColor = true;
+            this.btnReparar.Click += new System.EventHandler(this.btnReparar_Click);
+            // 
             // FrmReparacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -47,6 +58,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(979, 548);
+            this.Controls.Add(this.btnReparar);
             this.Controls.Add(this.lstTaller);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -63,6 +75,7 @@
         #endregion
 
         private System.Windows.Forms.ListBox lstTaller;
+        private System.Windows.Forms.Button btnReparar;
     }
 }
 

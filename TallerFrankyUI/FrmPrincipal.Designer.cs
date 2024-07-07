@@ -32,6 +32,7 @@
             this.btnReparar = new System.Windows.Forms.Button();
             this.btnCargarBarco = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnMostrarBarcos = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnReparar
@@ -67,12 +68,24 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // btnMostrarBarcos
+            // 
+            this.btnMostrarBarcos.Font = new System.Drawing.Font("Calibri", 20F);
+            this.btnMostrarBarcos.Location = new System.Drawing.Point(53, 289);
+            this.btnMostrarBarcos.Name = "btnMostrarBarcos";
+            this.btnMostrarBarcos.Size = new System.Drawing.Size(247, 40);
+            this.btnMostrarBarcos.TabIndex = 3;
+            this.btnMostrarBarcos.Text = "Mostrar barcos";
+            this.btnMostrarBarcos.UseVisualStyleBackColor = true;
+            this.btnMostrarBarcos.Click += new System.EventHandler(this.btnMostrarBarcos_Click);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(375, 271);
+            this.ClientSize = new System.Drawing.Size(375, 341);
+            this.Controls.Add(this.btnMostrarBarcos);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnCargarBarco);
             this.Controls.Add(this.btnReparar);
@@ -94,5 +107,6 @@
         private System.Windows.Forms.Button btnReparar;
         private System.Windows.Forms.Button btnCargarBarco;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnMostrarBarcos;
     }
 }

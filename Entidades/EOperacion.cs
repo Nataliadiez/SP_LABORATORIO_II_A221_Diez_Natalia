@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
+    /// <summary>
+    /// Enumera las diferentes operaciones que se pueden realizar en un barco.
+    /// </summary>
     public enum EOperacion
     {
         Reparar_Mastil,
@@ -16,6 +19,9 @@ namespace Entidades
         Recargar_Cañones
     }
 
+    /// <summary>
+    /// Enumera los tipos de barcos disponibles.
+    /// </summary>
     public enum ETipoBarco
     {
         Pirata,

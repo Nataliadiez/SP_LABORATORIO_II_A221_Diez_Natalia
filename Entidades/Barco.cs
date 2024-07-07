@@ -12,53 +12,89 @@ namespace Entidades
     [XmlInclude(typeof(Marina))]
     public abstract class Barco
     {
-        //Atributos
+        // Atributos
         protected float costo;
         protected bool estadoReparado;
         protected string nombre;
         protected EOperacion operacion;
         protected int tripulacion;
 
-        //Propiedades
-        public float Costo {
+        // Propiedades
+        /// <summary>
+        /// Obtiene o establece el costo del barco.
+        /// </summary>
+        public float Costo
+        {
             get => costo;
             set => costo = value;
         }
-        public bool EstadoReparado {
+
+        /// <summary>
+        /// Obtiene o establece el estado de reparación del barco.
+        /// </summary>
+        public bool EstadoReparado
+        {
             get => estadoReparado;
             set => estadoReparado = value;
         }
-        public string Nombre {
-            get => nombre; 
+
+        /// <summary>
+        /// Obtiene o establece el nombre del barco.
+        /// </summary>
+        public string Nombre
+        {
+            get => nombre;
             set => nombre = value;
         }
-        public EOperacion Operacion {
-            get => operacion; 
+
+        /// <summary>
+        /// Obtiene o establece la operación del barco.
+        /// </summary>
+        public EOperacion Operacion
+        {
+            get => operacion;
             set => operacion = value;
         }
 
+        /// <summary>
+        /// Obtiene o establece la tripulación del barco.
+        /// </summary>
         public abstract int Tripulacion { get; set; }
 
-        //Constructores
+        // Constructores
+        /// <summary>
+        /// Constructor por defecto para la serialización.
+        /// </summary>
         public Barco()
         {
-
         }
-       
+
+        /// <summary>
+        /// Constructor que inicializa un barco con los valores especificados.
+        /// </summary>
+        /// <param name="costo">Costo del barco.</param>
+        /// <param name="estado">Estado de reparación del barco.</param>
+        /// <param name="nombre">Nombre del barco.</param>
+        /// <param name="operacion">Operación del barco.</param>
+        /// <param name="tripulacion">Tripulación del barco.</param>
         public Barco(float costo, bool estado, string nombre, EOperacion operacion, int tripulacion)
         {
             this.costo = costo;
-            this.estadoReparado= estado;
+            this.estadoReparado = estado;
             this.nombre = nombre;
             this.operacion = operacion;
             this.tripulacion = tripulacion;
         }
 
-        //Métodos
+        // Métodos
+        /// <summary>
+        /// Compara dos barcos por su nombre.
+        /// </summary>
+        /// <param name="barco">El barco a comparar.</param>
+        /// <returns>True si los nombres son iguales, False en caso contrario.</returns>
         public bool CompararBarcos(Barco barco)
         {
-            bool resultado;
-            resultado = false;
+            bool resultado = false;
             if (this.Nombre == barco.Nombre)
             {
                 resultado = true;
@@ -66,8 +102,15 @@ namespace Entidades
             return resultado;
         }
 
+        /// <summary>
+        /// Método abstracto que se implementa en las clases derivadas para calcular el costo del barco.
+        /// </summary>
         public abstract void CalcularCosto();
 
+        /// <summary>
+        /// Devuelve una cadena que representa el estado actual del barco.
+        /// </summary>
+        /// <returns>Una cadena con la información del barco.</returns>
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
@@ -77,6 +120,5 @@ namespace Entidades
             sb.AppendLine($" Costo: {this.costo}");
             return sb.ToString();
         }
-
     }
 }
