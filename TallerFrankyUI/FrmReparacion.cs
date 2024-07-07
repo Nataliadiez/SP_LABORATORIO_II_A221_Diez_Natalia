@@ -19,11 +19,15 @@ namespace TallerFrankyUi
             InitializeComponent();
         }
 
+        /*
+         * iii. FrmReparacion:
+            1. Su constructor recibe un Taller como parámetro.
+            2. El evento LOAD deberá mostrar en el listbox todos los barcos del taller
+         */
         private void FrmReparacion_Load(object sender, EventArgs e)
         {
             //TODO: Asocio el evento que va a imprimir el ticket
             //TODO: Instanciar y comenzar el hilo que se va a encargar de reparar los barcos del taller
-           
            
         }
 

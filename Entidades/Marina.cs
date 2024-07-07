@@ -24,6 +24,11 @@ namespace Entidades
         }
 
         //Constructores
+        public Marina()
+        {
+
+        }
+
         public Marina(float costo, bool estado, string nombre, EOperacion operacion, int tripulacion) : base(costo, estado, nombre, operacion, tripulacion)
         {
 

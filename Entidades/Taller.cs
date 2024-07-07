@@ -42,7 +42,7 @@ namespace Entidades
 
         public Taller IngresarBarco(Barco barco)
         {
-            if (this.EncontrarBarco(barco))
+            if (this.EncontrarBarco(barco) == false)
             {
                 this.barcos.Add(barco);
             }
@@ -54,7 +54,7 @@ namespace Entidades
             resultado = false;
             if(taller is Taller)
             {
-                foreach (Barco brco in ((Taller)taller).barcos)
+                foreach (Barco brco in ((Taller)taller).Barcos)
                 {
                     if (brco.EstadoReparado == false)
                     {
